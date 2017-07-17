@@ -1,5 +1,4 @@
 var port = 44444;
-var greet = require('./public/greet')
 var app = require('express')();
 
 app.use(require('compression')());
@@ -11,9 +10,6 @@ app.use(require('express').static('public'));
 app.get('/', function (req, res) {
   res.send('nawascript');
 });
-
-greet.english()
-greet.spanish()
 
 require('http').createServer(app).listen(port,function(){
   console.log('server is running you beeezy, on port', port)
